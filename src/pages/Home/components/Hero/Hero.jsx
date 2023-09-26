@@ -1,0 +1,42 @@
+// stylesheet
+import "./syles/Hero.css";
+
+// images
+import UserImage from "./images/users.png";
+import Card1 from "./images/card1.png";
+import Card2 from "./images/card2.png";
+import Card3 from "./images/card3.png";
+import Decore from "./images/Decore.svg";
+
+const Hero = () => {
+  return (
+    <section className="hero">
+      <div className="left_hero">
+        <h4>With just a single click, you can</h4>
+        <h1>
+          Find the
+          Best
+          <span className="special_text">
+            <img src={Decore} alt="dash" />
+          </span>
+        </h1>
+        <h1> School Anywhere In The World.</h1>
+        <p>
+          Explore Highly Recommended Schools Near You for a Brighter Future in
+          Education. Discover Excellence Today
+        </p>
+        <div className="users">
+          <img src={UserImage} alt="User Image" />
+          <p>Student Who Used SchoolFinder </p>
+        </div>
+      </div>
+      <div className="right_hero">
+        <img src={Card1} alt="image" className="card1" />
+        <img src={Card3} alt="image" className="card2" />
+        <img src={Card2} alt="image" className="card3" />
+      </div>
+    </section>
+  );
+};
+
+export default Hero;
