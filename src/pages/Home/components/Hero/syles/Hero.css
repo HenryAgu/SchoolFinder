@@ -13,6 +13,8 @@
   width: 50%;
 }
 
+/* Left hand side of hero */
+
 .left_hero {
   display: flex;
   flex-direction: column;
@@ -82,6 +84,8 @@
   line-height: 40px; /* 222.222% */
 }
 
+/* Right side of hero section */
+
 .right_hero {
   background-image: url(../images/Hero.png);
   background-position: center center;
@@ -117,4 +121,47 @@
   position: relative;
   top: 250px;
   animation: bounce 1s infinite;
+}
+
+/* search box */
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 10px;
+  text-align: center;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0px 2px 80px 2px rgba(0, 0, 0, 0.06);
+  width: 75%;
+  padding: 30px 40px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+
+.search input {
+  color: #666;
+  font-family: Open Sans;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 80%;
+  border: none;
+  outline: none;
+}
+
+.search button{
+  border: none;
+  outline: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 10px;
+  background: #38acff;
+  box-shadow: 0px 8px 16px 0px rgba(250, 116, 54, 0.16);
+  color: #fff;
+  font-family: Open Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
 }
