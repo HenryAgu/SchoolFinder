@@ -80,8 +80,9 @@ header .nav-btn {
   column-gap: 20px;
 }
 
-.right_nav a {
+.right_nav p {
   text-decoration: none;
+  cursor: pointer;
   color: #222;
   font-family: Open Sans;
   font-size: 22px;
@@ -226,6 +227,12 @@ header .nav-btn {
     align-items: center;
     row-gap: 20px;
     text-align: center;
+  }
+  .mobile_user p{
+    color: #174b60;
+    letter-spacing: 1px;
+    font-weight: 500;
+    font-size: 20px;
   }
   .mobile_user button{
     border: none;

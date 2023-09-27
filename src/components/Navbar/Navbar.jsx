@@ -1,4 +1,4 @@
-// import React from "react";
+import { useState } from "react";
 
 // stylesheet
 import "./style/Navbar.css";
@@ -18,7 +18,13 @@ import Logo from "./images/Logo.svg";
 import Menu from "./images/menu.svg";
 import DropDown from "./images/arrow-down.svg";
 
+// components
+import SignInModal from "./SignInModal";
+
 const Navbar = () => {
+  const [openSignIn, setOpenSignIn] = useState(false);
+  const [openSignUp, setOpenSignUp] = useState(false);
+
   // Navbar open and close function
   const navRef = useRef();
 
@@ -48,10 +54,14 @@ const Navbar = () => {
               <img src={DropDown} alt="Dropdown" />
             </NavLink>
             <div className="mobile_user">
-              <NavLink>Sign In</NavLink>
-              <NavLink>
-                <button>Add School</button>
-              </NavLink>
+              <p
+                onClick={() => {
+                  setOpenSignIn(true);
+                }}
+              >
+                Sign In
+              </p>
+              <button>Add School</button>
             </div>
             <button
               className="nav-btn nav-close-btn"
@@ -62,16 +72,21 @@ const Navbar = () => {
             </button>
           </nav>
           <div className="right_nav">
-            <NavLink>Sign In</NavLink>
-            <NavLink>
-              <button>Add School</button>
-            </NavLink>
+            <p
+              onClick={() => {
+                setOpenSignIn(true);
+              }}
+            >
+              Sign In
+            </p>
+            <button>Add School</button>
           </div>
           <button className="nav-btn" onClick={showNavbar}>
             <img src={Menu} alt="Menu" />
           </button>
         </header>
       </div>
+      {openSignIn && <SignInModal setOpenSignIn={setOpenSignIn} />}
     </div>
   );
 };
