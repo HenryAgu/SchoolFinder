@@ -20,6 +20,7 @@ import DropDown from "./images/arrow-down.svg";
 
 // components
 import SignInModal from "./SignInModal";
+import SignUpModal from "./SignUpModal";
 
 const Navbar = () => {
   const [openSignIn, setOpenSignIn] = useState(false);
@@ -79,7 +80,7 @@ const Navbar = () => {
             >
               Sign In
             </p>
-            <button>Add School</button>
+            <button onClick={()=> setOpenSignUp(true)}>Add School</button>
           </div>
           <button className="nav-btn" onClick={showNavbar}>
             <img src={Menu} alt="Menu" />
@@ -87,6 +88,7 @@ const Navbar = () => {
         </header>
       </div>
       {openSignIn && <SignInModal setOpenSignIn={setOpenSignIn} />}
+      {openSignUp && <SignUpModal setOpenSignUp={setOpenSignUp}/>}
     </div>
   );
 };
