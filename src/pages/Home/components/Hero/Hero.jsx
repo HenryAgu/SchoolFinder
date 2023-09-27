@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useContext } from "react";
 
 // stylesheet
 import "./syles/Hero.css";
@@ -14,11 +14,13 @@ import GoogleMapIcon from "./images/googleMap.svg";
 // react router
 import { NavLink } from "react-router-dom";
 
+import { SignInContext } from "../../../../Contexts/SignInContext";
+
 // components
 import SignUpModal from "../../../../components/Navbar/SignUpModal";
 
 const Hero = () => {
-  const [openSignUp, setOpenSignUp] = useState(false);
+      const {openSignUp,setOpenSignUp} = useContext(SignInContext);
   return (
     <>
       <section className="hero">

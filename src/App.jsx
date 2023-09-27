@@ -1,22 +1,35 @@
+import { useState } from "react";
+
 // stylesheet
 import "./App.css";
 
 // react routers
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import { SignInContext } from "./Contexts/SignInContext";
+
 // components
 import Home from "./pages/Home/Home";
 import Register from "./pages/Register/Register";
+import SearchPage from "./pages/SearchPage/SearchPage";
 
 function App() {
+  const [openSignIn, setOpenSignIn] = useState(false);
+  const [openSignUp, setOpenSignUp] = useState(false);
+
   return (
     <main>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/register" element={<Register />} />
-        </Routes>
-      </BrowserRouter>
+      <SignInContext.Provider
+        value={{ openSignIn, setOpenSignIn, openSignUp, setOpenSignUp }}
+      >
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/search_page" element={<SearchPage />} />
+          </Routes>
+        </BrowserRouter>
+      </SignInContext.Provider>
     </main>
   );
 }

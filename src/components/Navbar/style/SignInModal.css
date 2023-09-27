@@ -69,7 +69,6 @@
   border-radius: 20px;
   background: #fff;
   padding: 18px 20px;
-
   width: 100%;
 }
 
@@ -83,6 +82,7 @@
   line-height: normal;
   border: none;
   outline: none;
+
 }
 
 .sign_in_container .sign_in_form button {

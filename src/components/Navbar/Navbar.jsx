@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useState,useContext } from "react";
 
 // stylesheet
 import "./style/Navbar.css";
+
+import {SignInContext} from "../../Contexts/SignInContext";
 
 // react icons
 import { AiOutlineClose } from "react-icons/ai";
@@ -20,10 +22,9 @@ import DropDown from "./images/arrow-down.svg";
 
 // components
 import SignInModal from "./SignInModal";
-import SignUpModal from "./SignUpModal";
 
 const Navbar = () => {
-  const [openSignIn, setOpenSignIn] = useState(false);
+
 
   // Navbar open and close function
   const navRef = useRef();
@@ -35,6 +36,9 @@ const Navbar = () => {
   const closeNavbar = () => {
     navRef.current.classList.remove("responsive_nav");
   };
+
+  // context
+  const {openSignIn,setOpenSignIn} = useContext(SignInContext);
 
   return (
     <div className="Navbar">
