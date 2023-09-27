@@ -24,7 +24,6 @@ import SignUpModal from "./SignUpModal";
 
 const Navbar = () => {
   const [openSignIn, setOpenSignIn] = useState(false);
-  const [openSignUp, setOpenSignUp] = useState(false);
 
   // Navbar open and close function
   const navRef = useRef();
@@ -62,7 +61,7 @@ const Navbar = () => {
               >
                 Sign In
               </p>
-              <button>Add School</button>
+              <NavLink to="/register"><button>Add School</button></NavLink>
             </div>
             <button
               className="nav-btn nav-close-btn"
@@ -80,7 +79,7 @@ const Navbar = () => {
             >
               Sign In
             </p>
-            <button onClick={()=> setOpenSignUp(true)}>Add School</button>
+            <NavLink to="/register"><button>Add School</button></NavLink>
           </div>
           <button className="nav-btn" onClick={showNavbar}>
             <img src={Menu} alt="Menu" />
@@ -88,7 +87,6 @@ const Navbar = () => {
         </header>
       </div>
       {openSignIn && <SignInModal setOpenSignIn={setOpenSignIn} />}
-      {openSignUp && <SignUpModal setOpenSignUp={setOpenSignUp}/>}
     </div>
   );
 };

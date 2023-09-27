@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 // stylesheet
 import "./syles/Hero.css";
 
@@ -12,7 +14,11 @@ import GoogleMapIcon from "./images/googleMap.svg";
 // react router
 import { NavLink } from "react-router-dom";
 
+// components
+import SignUpModal from "../../../../components/Navbar/SignUpModal";
+
 const Hero = () => {
+  const [openSignUp, setOpenSignUp] = useState(false);
   return (
     <>
       <section className="hero">
@@ -44,9 +50,10 @@ const Hero = () => {
           <img src={GoogleMapIcon} alt="map" />
           <input type="text" placeholder="Find School By Name, Country"/>
           <NavLink>
-            <button>Find School</button>
+            <button onClick={()=> setOpenSignUp(true)}>Find School</button>
           </NavLink>
       </div>
+      {openSignUp && <SignUpModal setOpenSignUp={setOpenSignUp}/>}
     </>
   );
 };
