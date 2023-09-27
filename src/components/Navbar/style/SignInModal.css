@@ -53,7 +53,7 @@
   line-height: normal;
 }
 
-.sign_in_container form {
+.sign_in_container .sign_in_form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -73,13 +73,19 @@
   width: 100%;
 }
 
-.inner_form input {
+.sign_in_form .inner_form input {
   width: 100%;
+  color: #666;
+  font-family: Open Sans;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
   border: none;
   outline: none;
 }
 
-.sign_in_container form button {
+.sign_in_container .sign_in_form button {
   width: 100%;
   border-radius: 20px;
   background: #38acff;
@@ -140,4 +146,8 @@
   background: #fff;
   cursor: pointer;
   border: 1.327px solid #38acff;
+}
+
+.google_login a button{
+  text-decoration: none;
 }
