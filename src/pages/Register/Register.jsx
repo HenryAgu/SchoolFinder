@@ -31,7 +31,7 @@ const Register = () => {
           <h1>Register your school</h1>
         </div>
         <form className="register_form">
-          <div className="inner_form">
+          <div className="inner_form inner_register_form">
             <div className="input_content">
               <img src={School} alt="school" />
               <input type="text" placeholder="School Name" required />
@@ -40,7 +40,7 @@ const Register = () => {
               <input type="text" placeholder="I’m the School.." required />
             </div>
           </div>
-          <div className="inner_form">
+          <div className="inner_form inner_register_form">
             <div className="input_content">
               <img src={Gmail} alt="Gmail" />
               <input type="email" placeholder="Gmail" required />
@@ -50,7 +50,7 @@ const Register = () => {
               <input type="text" placeholder="Phone Number" required />
             </div>
           </div>
-          <div className="inner_form">
+          <div className="inner_form inner_register_form">
             <div className="input_content">
               <img src={Password} alt="Password" />
               <input type="password" placeholder="Create Password" required />

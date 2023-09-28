@@ -130,12 +130,11 @@
   padding: 13px 20px;
 }
 
+
+
 .login_route {
   margin-top: 20px;
   text-align: center;
-}
-
-.login_route p {
   color: #222;
   text-align: center;
   font-family: Open Sans;
@@ -184,7 +183,7 @@
   .register_header h1 {
     font-size: 25px;
   }
-  .inner_form {
+  .inner_register_form {
     flex-direction: column;
     column-gap: 0;
     row-gap: 20px;
@@ -209,5 +208,8 @@
     display: flex;
     justify-content: center;
     margin: 20px auto;
+  }
+  .login_route {
+    font-size: 13px;
   }
 }
