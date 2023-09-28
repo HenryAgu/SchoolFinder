@@ -1,5 +1,5 @@
 .sign_in_overlay {
-  background-color: rgba(255, 255, 255, 0.5); 
+  background-color: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(5px);
   width: 100vw;
   height: 100vh;
@@ -82,7 +82,6 @@
   line-height: normal;
   border: none;
   outline: none;
-
 }
 
 .sign_in_container .sign_in_form button {
@@ -148,6 +147,71 @@
   border: 1.327px solid #38acff;
 }
 
-.google_login a button{
+.google_login a button {
   text-decoration: none;
+}
+
+/* responsiveness starts here */
+@media (max-width: 1024px) {
+  .cancel {
+    margin-left: 55vw;
+  }
+  .sign_in_container {
+    width: 55%;
+  }
+}
+
+/* Medium Screens */
+@media (max-width: 991px) {
+  .cancel {
+    margin-left: 70vw;
+  }
+  .sign_in_container {
+    width: 70%;
+  }
+}
+
+/* Small Screens */
+@media screen and (max-width: 640px) {
+  .cancel {
+    margin-left: 85vw;
+  }
+  .cancel img {
+    width: 20px;
+    height: 20px;
+  }
+  .sign_in_header p {
+    font-size: 12px;
+  }
+  .sign_in_container {
+    width: 90%;
+    padding: 30px;
+  }
+  .inner_form {
+    column-gap: 0;
+  }
+  .sign_in_form .inner_form input {
+    font-size: 10.624px;
+  }
+  .sign_in_container .sign_in_form button {
+    font-size: 10.624px;
+    border-radius: 16.345px;
+  }
+  .sign_in_container .or hr {
+    height: 0.5px;
+  }
+  .or {
+    column-gap: 5px;
+  }
+  .or span {
+    font-size: 5.77px;
+  }
+  .google_login {
+    font-size: 12px;
+    padding: 5px 20px;
+  }
+  .google_login img {
+    width: 12px;
+    height: 12px;
+  }
 }

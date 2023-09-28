@@ -61,6 +61,7 @@ const Navbar = () => {
               <p
                 onClick={() => {
                   setOpenSignIn(true);
+                  closeNavbar;
                 }}
               >
                 Sign In

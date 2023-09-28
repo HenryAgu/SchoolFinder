@@ -1,4 +1,4 @@
-import { useState,useContext } from "react";
+import { useState, useContext } from "react";
 
 // stylesheet
 import "./syles/Hero.css";
@@ -20,7 +20,7 @@ import { SignInContext } from "../../../../Contexts/SignInContext";
 import SignUpModal from "../../../../components/Navbar/SignUpModal";
 
 const Hero = () => {
-      const {openSignUp,setOpenSignUp} = useContext(SignInContext);
+  const { openSignUp, setOpenSignUp } = useContext(SignInContext);
   return (
     <>
       <section className="hero">
@@ -49,13 +49,15 @@ const Hero = () => {
         </div>
       </section>
       <div className="search">
+        <div className="search_input">
           <img src={GoogleMapIcon} alt="map" />
-          <input type="text" placeholder="Find School By Name, Country"/>
-          <NavLink>
-            <button onClick={()=> setOpenSignUp(true)}>Find School</button>
-          </NavLink>
+          <input type="text" placeholder="Find School By Name, Country" />
+        </div>
+        <NavLink>
+          <button onClick={() => setOpenSignUp(true)}>Find School</button>
+        </NavLink>
       </div>
-      {openSignUp && <SignUpModal setOpenSignUp={setOpenSignUp}/>}
+      {openSignUp && <SignUpModal setOpenSignUp={setOpenSignUp} />}
     </>
   );
 };

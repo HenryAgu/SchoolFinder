@@ -83,19 +83,70 @@
 .signup_buttons .school_owner {
   border: 2px solid #38acff;
   background: #fff;
-  color: #0095FF;
+  color: #0095ff;
 }
 
-.signup_buttons .school_finder{
+.signup_buttons .school_finder {
   border: 2px solid #38acff;
-  background: #38ACFF;
+  background: #38acff;
   color: #fff;
 }
-
 
 .sign_up_container .right_sign_up {
   width: 50%;
   background: url(../images/SignUp.png), lightgray 50% / cover no-repeat;
   background-position: center center;
   height: 100%;
+}
+
+/* responsiveness starts here */
+@media (max-width: 1280px) {
+  .sign_up_cancel {
+    margin-left: 60vw;
+  }
+  .sign_up_container {
+    width: 60%;
+  }
+}
+
+/* responsiveness starts here */
+@media (max-width: 1024px) {
+  .sign_up_cancel {
+    margin-left: 80vw;
+  }
+  .sign_up_container {
+    width: 80%;
+  }
+}
+
+/* Medium Screens */
+@media (max-width: 991px) {
+  .sign_up_cancel {
+    margin-left: 90vw;
+  }
+  .sign_up_container {
+    width: 95%;
+  }
+}
+
+/* Small Screens */
+@media screen and (max-width: 640px) {
+  .sign_up_header img {
+    width: 19.561px;
+    height: 19.561px;
+  }
+  .sign_up_header h3 {
+    font-size: 12px;
+  }
+  .sign_up_container .left_sign_up{
+    padding: 30px 10px;
+  }
+  .sign_up_container .left_sign_up h1 {
+    font-size: 16px;
+  }
+  .signup_buttons button{
+    font-size: 12px;
+    width: 100%;
+    padding: 10px 20px;
+  }
 }

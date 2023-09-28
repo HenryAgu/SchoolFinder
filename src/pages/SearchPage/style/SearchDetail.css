@@ -1,5 +1,11 @@
-.search_detail{
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    column-gap: 10px;
+.search_detail {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  column-gap: 10px;
+}
+
+.filter {
+  border-radius: 20px;
+  border: 1px solid #d4e6f3;
+  padding: 20px;
 }

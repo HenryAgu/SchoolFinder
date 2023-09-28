@@ -123,6 +123,9 @@ header .nav-btn {
 }
 
 @media (max-width: 1024px) {
+  nav{
+    margin-left: -200px;
+  }
   nav a {
     font-size: 18px;
     margin: 0 1rem;
