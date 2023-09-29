@@ -29,3 +29,14 @@
   outline: none;
   cursor: pointer;
 }
+
+/* Small Screens */
+@media screen and (max-width: 640px) {
+  .right_searchnav img {
+    display: none;
+  }
+  .right_searchnav button{
+    font-size: 15px;
+    padding: 10px 25px;
+  }
+}
