@@ -71,12 +71,21 @@
     margin: 30px auto;
     padding: 0;
   }
+
+  .inner_search{
+    border-radius: 10px;
+    width: 95%;
+    padding: 10px 20px;
+    background: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(250, 116, 54, 0.16);
+  }
   .search_box .inner_search img {
     width: 24px;
     height: 24px;
   }
   .search_box .inner_search input {
     font-size: 13px;
+    width: 100%;
   }
   .search_box button{
     font-size: 13px;

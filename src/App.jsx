@@ -12,6 +12,7 @@ import { SignInContext } from "./Contexts/SignInContext";
 import Home from "./pages/Home/Home";
 import Register from "./pages/Register/Register";
 import SearchPage from "./pages/SearchPage/SearchPage";
+import SchoolProfile from "./pages/SchoolProfile/SchoolProfile";
 
 function App() {
   const [openSignIn, setOpenSignIn] = useState(false);
@@ -27,6 +28,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/register" element={<Register />} />
             <Route path="/search_page" element={<SearchPage />} />
+            <Route path="/school_profile" element={<SchoolProfile/>}/>
           </Routes>
         </BrowserRouter>
       </SignInContext.Provider>

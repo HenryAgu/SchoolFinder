@@ -365,6 +365,10 @@
     font-size: 15px;
     padding: 10px;
   }
+  .school_list_header{
+    width: 95%;
+    margin: 0 auto;
+  }
   .school_list_header h1{
     font-size: 25px;
   }
@@ -406,6 +410,7 @@
     padding: 2px 15px;
   }
   .map {
+    width: 100vw;
     height: 255px;
   }
 }
