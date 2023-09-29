@@ -410,7 +410,7 @@
     padding: 2px 15px;
   }
   .map {
-    width: 100vw;
+    width: auto;
     height: 255px;
   }
 }

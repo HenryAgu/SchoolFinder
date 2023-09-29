@@ -320,6 +320,10 @@
     line-height: 13.714px;
     padding: 8px 20px;
   }
+  .right_school_info{
+    width: 95%;
+    margin: 0 auto;
+  }
   .right_school_info img{
     height: 196px;
   }
