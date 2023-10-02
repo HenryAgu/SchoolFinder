@@ -13,6 +13,10 @@ import Home from "./pages/Home/Home";
 import Register from "./pages/Register/Register";
 import SearchPage from "./pages/SearchPage/SearchPage";
 import SchoolProfile from "./pages/SchoolProfile/SchoolProfile";
+import SchoolDashboardLayout from "./pages/SchoolDashboardLayout/SchoolDashboardLayout";
+import SchoolProfileDash from "./pages/SchoolDashboardLayout/pages/SchoolProfileDash";
+import SchoolStatistics from "./pages/SchoolDashboardLayout/pages/SchoolStatistics";
+import SchoolSettings from "./pages/SchoolDashboardLayout/pages/SchoolSettings";
 
 function App() {
   const [openSignIn, setOpenSignIn] = useState(false);
@@ -29,7 +33,12 @@ function App() {
             <Route path="/register" element={<Register />} />
             <Route path="/search_page" element={<SearchPage />} />
             <Route path="/school_profile" element={<SchoolProfile/>}/>
-          </Routes>
+            <Route element={<SchoolDashboardLayout/>}>
+              <Route path="/dashboard/school_profile/" element={<SchoolProfileDash/>}/>
+              <Route path="/dashboard/statistics" element={<SchoolStatistics/>}/>
+              <Route path="/dashboard/settings" element={<SchoolSettings/>}/>
+            </Route>
+         </Routes>
         </BrowserRouter>
       </SignInContext.Provider>
     </main>

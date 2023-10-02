@@ -50,10 +50,10 @@ const Navbar = () => {
             </div>
           </NavLink>
           <nav ref={navRef}>
-            <NavLink to="/about" onClick={closeNavbar}>
+            <NavLink to="" onClick={closeNavbar}>
               About
             </NavLink>
-            <NavLink to="/schools" onClick={closeNavbar}>
+            <NavLink to="" onClick={closeNavbar}>
               <p className="drop_down">Schools</p>
               <img src={DropDown} alt="Dropdown" />
             </NavLink>
