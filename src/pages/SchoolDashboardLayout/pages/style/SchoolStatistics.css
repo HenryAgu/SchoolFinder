@@ -53,3 +53,21 @@
   font-weight: 400;
   line-height: 35px; /* 194.444% */
 }
+
+/* Medium Screens */
+@media (max-width: 991px) {
+  .reviews_header h3 {
+    font-size: 16px;
+  }
+  .reviewer img {
+    width: 28.083px;
+    height: 29px;
+  }
+  .reviewer span {
+    font-size: 12px;
+  }
+  .review_content p{
+    font-size: 12px;
+    line-height: 20px;
+  }
+}

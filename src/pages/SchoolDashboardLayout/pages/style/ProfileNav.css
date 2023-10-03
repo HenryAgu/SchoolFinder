@@ -23,3 +23,29 @@
 .school_map img {
   width: 100%;
 }
+
+/* Medium Screens */
+@media (max-width: 991px) {
+  .profile_nav  .profile_contact{
+    margin-bottom:-30px;
+  }
+  .profile_nav h3{
+    font-size: 15px;
+  }
+  .fees h3{
+    margin-bottom: -30px;
+  }
+}
+
+/* Small Screens */
+@media screen and (max-width: 640px) {
+  .fees {
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+    margin-bottom: 0;
+  }
+  .settings_box{
+    flex-direction: column;
+  }
+}

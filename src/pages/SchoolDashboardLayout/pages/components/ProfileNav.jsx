@@ -9,7 +9,7 @@ import map from "../images/Map.png";
 const ProfileNav = () => {
   return (
     <div className="profile_nav">
-      <h3>Contact</h3>
+      <h3 className="profile_contact">Contact</h3>
       <div className="settings_box">
         <div className="inner_settings">
           <label htmlFor="">School Website</label>

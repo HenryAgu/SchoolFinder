@@ -81,3 +81,34 @@
   font-weight: 400;
   line-height: normal;
 }
+
+/* Medium Screens */
+@media (max-width: 991px) {
+  .settings_text h4{
+    font-size: 16px;
+    line-height: 28px;
+  }
+  .settings_text p{
+    font-size: 13px;
+    line-height: 20px; 
+    margin-bottom: 20px;
+  }
+  .settings_form{
+    margin-top: 5px;
+  }
+  .inner_settings label {
+    font-size: 13px;
+    line-height: 24.371px;
+  }
+  .inner_settings select,.form_box input{
+    font-size: 10px;
+  }
+}
+
+/* Small Screens */
+@media screen and (max-width: 640px) {
+  .inner_settings {
+    width: 100%;
+    row-gap: 20px;
+  }
+}
