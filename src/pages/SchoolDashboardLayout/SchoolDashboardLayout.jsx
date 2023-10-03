@@ -5,7 +5,7 @@ import "./style/SchoolDashboardLayout.css";
 import SchoolSidebar from "./SchoolSidebar";
 
 // Outlet
-import { Outlet } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 
 // Images
 import Logo from "./images/Logo.svg";
@@ -14,7 +14,9 @@ const SchoolDashboard = () => {
   return (
     <div className="school_dashboard">
       <div className="school_dashboard_header">
-        <img src={Logo} alt="Logo" />
+        <NavLink to="/">
+          <img src={Logo} alt="Logo" />
+        </NavLink>
       </div>
       <div className="school_dashboard_container">
         <SchoolSidebar />
