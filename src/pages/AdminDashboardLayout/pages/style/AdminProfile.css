@@ -224,4 +224,25 @@
   .log_out h4{
     font-size: 13px;
   }
+
+  .add_admin_header h4 {
+    font-size: 13px;
+  }
+  
+  .add_admin_header p {
+    font-size: 11px;
+  }
+  .add_admin_form {
+    margin-top: 20px;
+  }
+  .inner_add_form label{
+    font-size: 13px;
+  }
+  .inner_add_form input {
+    font-size: 11px;
+    padding: 10px;
+  }
+  .add_admin_form button{
+    font-size: 13px;
+  }
 }
