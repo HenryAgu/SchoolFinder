@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 // images
 import HomeIcon from "./images/Home.svg";
 import DocumentIcon from "./images/Document.svg";
+import Avatar from "./images/Avatar.svg";
 
 const AdminSidebar = () => {
   const AdminMenuItems = [
@@ -16,6 +17,11 @@ const AdminSidebar = () => {
       name: "Document",
       icon: DocumentIcon,
     },
+    {
+      path:"/admin/admin_profile",
+      name: "Admin Profile",
+      icon: Avatar,
+    }
   ];
   return (
     <div className="school_sidebar">

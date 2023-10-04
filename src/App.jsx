@@ -20,6 +20,7 @@ import SchoolSettings from "./pages/SchoolDashboardLayout/pages/SchoolSettings";
 import AdminDashboardLayout from "./pages/AdminDashboardLayout/AdminDashboardLayout";
 import RegisteredSchools from "./pages/AdminDashboardLayout/pages/RegisteredSchools";
 import DocumentVerification from "./pages/AdminDashboardLayout/pages/DocumentVerification";
+import AdminProfile from "./pages/AdminDashboardLayout/pages/AdminProfile";
 
 function App() {
   const [openSignIn, setOpenSignIn] = useState(false);
@@ -44,6 +45,7 @@ function App() {
             <Route element={<AdminDashboardLayout/>}>
               <Route path="/admin/registered_schools" element={<RegisteredSchools/>}/>
               <Route path="/admin/document_verification" element={<DocumentVerification/>}/>
+              <Route path="/admin/admin_profile" element={<AdminProfile/>}/>
             </Route>
          </Routes>
         </BrowserRouter>
