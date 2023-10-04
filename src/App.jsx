@@ -17,6 +17,9 @@ import SchoolDashboardLayout from "./pages/SchoolDashboardLayout/SchoolDashboard
 import SchoolProfileDash from "./pages/SchoolDashboardLayout/pages/SchoolProfileDash";
 import SchoolStatistics from "./pages/SchoolDashboardLayout/pages/SchoolStatistics";
 import SchoolSettings from "./pages/SchoolDashboardLayout/pages/SchoolSettings";
+import AdminDashboardLayout from "./pages/AdminDashboardLayout/AdminDashboardLayout";
+import RegisteredSchools from "./pages/AdminDashboardLayout/pages/RegisteredSchools";
+import DocumentVerification from "./pages/AdminDashboardLayout/pages/DocumentVerification";
 
 function App() {
   const [openSignIn, setOpenSignIn] = useState(false);
@@ -34,9 +37,13 @@ function App() {
             <Route path="/search_page" element={<SearchPage />} />
             <Route path="/school_profile" element={<SchoolProfile/>}/>
             <Route element={<SchoolDashboardLayout/>}>
-              <Route path="/dashboard/school_profile/" element={<SchoolProfileDash/>}/>
+              <Route path="/dashboard/school_profile" element={<SchoolProfileDash/>}/>
               <Route path="/dashboard/statistics" element={<SchoolStatistics/>}/>
               <Route path="/dashboard/settings" element={<SchoolSettings/>}/>
+            </Route>
+            <Route element={<AdminDashboardLayout/>}>
+              <Route path="/admin/registered_schools" element={<RegisteredSchools/>}/>
+              <Route path="/admin/document_verification" element={<DocumentVerification/>}/>
             </Route>
          </Routes>
         </BrowserRouter>
