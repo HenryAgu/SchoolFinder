@@ -130,9 +130,14 @@
 
 /* Small Screens */
 @media screen and (max-width: 640px) {
-    .document_search input {
-        font-size: 14px;
-      }
+  .left_document,
+  .right_document {
+    width: 98%;
+    margin: 0 auto;
+  }
+  .document_search input {
+    font-size: 14px;
+  }
   .schools_license {
     flex-direction: column;
     row-gap: 20px;
