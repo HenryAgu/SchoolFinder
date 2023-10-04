@@ -50,13 +50,6 @@ const Navbar = () => {
             </div>
           </NavLink>
           <nav ref={navRef}>
-            <NavLink to="" onClick={closeNavbar}>
-              About
-            </NavLink>
-            <NavLink to="" onClick={closeNavbar}>
-              <p className="drop_down">Schools</p>
-              <img src={DropDown} alt="Dropdown" />
-            </NavLink>
             <div className="mobile_user">
               <p
                 onClick={() => {
