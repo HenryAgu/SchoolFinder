@@ -69,17 +69,6 @@ const SignInModal = ({ setOpenSignIn }) => {
         ) : null}
           <button>Login</button>
         </form>
-        <div className="or">
-          <hr></hr>
-          <span>or</span>
-          <hr></hr>
-        </div>
-        <NavLink to="/register">
-          <button className="google_login">
-            <img src={Google} alt="Google" />
-            <p>Register with Gmail</p>
-          </button>
-        </NavLink>
       </div>
     </div>
   );

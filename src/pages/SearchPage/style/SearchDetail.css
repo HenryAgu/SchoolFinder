@@ -64,6 +64,11 @@
   background: #d4e6f3;
 }
 
+.direct_levels:active{
+  color: #38acff;
+  background: #d4e6f3;
+}
+
 .school_type {
   display: flex;
   align-items: center;
@@ -223,10 +228,14 @@
 .school_card_top h4 {
   color: #444;
   font-family: Raleway;
-  font-size: 24px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+}
+
+.left_school_card{
+  height: 100%;
 }
 
 .school_card_top img {

@@ -1,3 +1,5 @@
+import React, { useState,useEffect } from "react";
+
 import "../style//ProfileNav.css";
 
 // images
@@ -7,6 +9,26 @@ import RenameIcon from "../images/rename.svg";
 import map from "../images/Map.png";
 
 const ProfileNav = () => {
+  // contact
+  const [schoolWebsite, setSchoolWebsite] = useState("www.timigroupschool.com");
+  const [schoolAddress, setSchoolAddress] = useState("Calle Sin National Headquater");
+  const [schoolPhone, setSchoolPhone] = useState("+124 906 8149 238");
+  const [schoolEmail, setSchoolEmail] = useState("SayhelloTimiSchool@gmail.com");
+
+  // Fees
+  const [schoolFees, setSchoolFees] = useState("30000");
+  const [formatted, setFormattedNumber] = useState('')
+  useEffect(() => {
+    // Use toLocaleString to format the number
+    const formatted = schoolFees.toLocaleString();
+    setFormattedNumber(formatted);
+  }, [schoolFees]);
+  const [scholarship, setScholarship] = useState("None");
+
+  // Admission
+  const [startingDate, setStartingDate] = useState('2023-09-29');
+  const [endingDate, setEndingDate] = useState('2023-09-29');
+
   return (
     <div className="profile_nav">
       <h3 className="profile_contact">Contact</h3>
@@ -14,14 +36,14 @@ const ProfileNav = () => {
         <div className="inner_settings">
           <label htmlFor="">School Website</label>
           <div className="form_box">
-            <input type="url" placeholder="www.timigroupschool.com" />
+            <input type="url" value={schoolWebsite} onChange={(e)=> setSchoolWebsite(e.target.value)} />
             <img src={RenameIcon} alt="rename" />
           </div>
         </div>
         <div className="inner_settings">
           <label htmlFor="">School Address</label>
           <div className="form_box">
-            <input type="text" placeholder="Calle Sin National Headquater" />
+            <input type="text" value={schoolAddress} onChange={(e)=> setSchoolAddress(e.target.value)} />
             <img src={RenameIcon} alt="rename" />
           </div>
         </div>
@@ -30,14 +52,14 @@ const ProfileNav = () => {
         <div className="inner_settings">
           <label htmlFor="">School Phone</label>
           <div className="form_box">
-            <input type="tel" placeholder="+124 906 8149 238" />
+            <input type="tel" value={schoolPhone} onChange={(e)=> setSchoolPhone(e.target.value)}/>
             <img src={RenameIcon} alt="rename" />
           </div>
         </div>
         <div className="inner_settings">
           <label htmlFor="">School Email</label>
           <div className="form_box">
-            <input type="email" placeholder="SayhelloTimiSchool@gmail.com" />
+            <input type="email" value={schoolEmail} onChange={(e)=> setSchoolEmail(e.target.value)}/>
             <img src={RenameIcon} alt="rename" />
           </div>
         </div>
@@ -52,7 +74,7 @@ const ProfileNav = () => {
           <div className="inner_settings">
             <label htmlFor="">Tuition Fee(Annual)</label>
             <div className="form_box">
-              <input type="number" placeholder="Timi Group School" />
+              <input type="number" value={formatted} onChange={(e)=> setSchoolFees(e.target.value)}/>
               <img src={RenameIcon} alt="rename" />
             </div>
           </div>
@@ -68,7 +90,7 @@ const ProfileNav = () => {
           <div className="inner_settings">
             <label htmlFor="">Schoolarship</label>
             <div className="form_box">
-              <input type="text" placeholder="None" />
+              <input type="text" value={scholarship} onChange={(e)=> setScholarship(e.target.value)} />
               <img src={RenameIcon} alt="rename" />
             </div>
           </div>
@@ -80,18 +102,21 @@ const ProfileNav = () => {
           <div className="inner_settings">
             <label htmlFor="">Starting</label>
             <div className="form_box">
-              <input type="date" />
+              <input type="date" value={startingDate} onChange={(e)=> setStartingDate(e.target.value)}/>
               <img src={RenameIcon} alt="rename" />
             </div>
           </div>
           <div className="inner_settings">
             <label htmlFor="">Ending</label>
             <div className="form_box">
-              <input type="date"/>
+              <input type="date" value={endingDate} onChange={(e)=> setEndingDate(e.target.value)}/>
               <img src={RenameIcon} alt="rename" />
             </div>
           </div>
         </div>
+      </div>
+      <div className="update_button">
+        <button>Update</button>
       </div>
     </div>
   );

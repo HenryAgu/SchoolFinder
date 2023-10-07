@@ -32,7 +32,7 @@ const Hero = () => {
               <img src={Decore} alt="dash" />
             </span>
           </h1>
-          <h1> School Anywhere In The World.</h1>
+          <h1> Schools Within Choba.</h1>
           <p>
             Explore Highly Recommended Schools Near You for a Brighter Future in
             Education. Discover Excellence Today
@@ -51,7 +51,7 @@ const Hero = () => {
       <div className="search">
         <div className="search_input">
           <img src={GoogleMapIcon} alt="map" />
-          <input type="text" placeholder="Find School By Name, Country" />
+          <input type="text" placeholder="Find School By Name" />
         </div>
         <NavLink>
           <button onClick={() => setOpenSignUp(true)}>Find School</button>

@@ -1,4 +1,4 @@
-import { useState,useContext } from "react";
+import { useState, useContext } from "react";
 
 // stylesheet
 import "./style/Register.css";
@@ -16,10 +16,30 @@ import Gmail from "./images/gmail.svg";
 import Phone from "./images/phone.svg";
 import Password from "./images/password.svg";
 import Website from "./images/website.svg";
-import { NavLink } from "react-router-dom";
+
+import { NavLink, Navigate } from "react-router-dom";
+
+// Toastify
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Register = () => {
   const { openSignIn, setOpenSignIn } = useContext(SignInContext);
+
+  // handle registration
+  const handleRegistration = (e) => {
+    e.preventDefault();
+    toast.success("School Added!", {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+  };
   return (
     <main className="register">
       <div className="register_container">
@@ -30,7 +50,7 @@ const Register = () => {
           </NavLink>
           <h1>Register your school</h1>
         </div>
-        <form className="register_form">
+        <form className="register_form" onSubmit={handleRegistration}>
           <div className="inner_form inner_register_form">
             <div className="input_content">
               <img src={School} alt="school" />
@@ -84,6 +104,7 @@ const Register = () => {
         </p>
       </div>
       {openSignIn && <SignInModal setOpenSignIn={setOpenSignIn} />}
+      <ToastContainer />
     </main>
   );
 };

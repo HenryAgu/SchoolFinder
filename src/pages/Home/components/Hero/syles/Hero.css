@@ -142,16 +142,17 @@
 .search_input {
   display: flex;
   align-items: center;
+  width: 80%;
 }
 
-.search input {
+.search_input input {
   color: #666;
   font-family: Open Sans;
   font-size: 22px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  width: 80%;
+  width: 100%;
   border: none;
   outline: none;
 }
@@ -159,9 +160,9 @@
 .search button {
   border: none;
   outline: none;
-  padding: 10px 15px;
+  padding: 10px 30px;
   cursor: pointer;
-  border-radius: 10px;
+  border-radius: 0;
   background: #38acff;
   box-shadow: 0px 8px 16px 0px rgba(250, 116, 54, 0.16);
   color: #fff;

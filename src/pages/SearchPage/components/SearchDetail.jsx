@@ -14,6 +14,7 @@ import Location from "../images/Location.svg";
 import Price from "../images/Price.svg";
 
 const SearchDetail = () => {
+  const [nursery, setNursery] = useState(false);
   const levels = [
     {
       id: 1,

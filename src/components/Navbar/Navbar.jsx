@@ -44,11 +44,9 @@ const Navbar = () => {
     <div className="Navbar">
       <div className="container">
         <header>
-          <NavLink to="/" style={{ textDecoration: "none" }}>
-            <div className="logo">
+            <div className="home_logo">
               <img src={Logo} alt="Logo" />
             </div>
-          </NavLink>
           <nav ref={navRef}>
             <div className="mobile_user">
               <p

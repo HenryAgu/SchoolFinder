@@ -35,23 +35,19 @@ const SchoolInfo = () => {
             </div>
           </div>
           <div className="right_school_price">
-            <div className="inner_save">
-              <img src={Like} alt="like" />
-              <p>save</p>
-            </div>
             <div className="rate_fig">4.2</div>
           </div>
         </div>
         <div className="school-inside_details">
           <div className="left_inside_details">
             <div className="inside_details">
-              <NavLink to="">www.timigroupschool.com</NavLink>
+              <NavLink to="" className="detail_link">www.timigroupschool.com</NavLink>
               <div className="detail_name">
                 <p>SCHOOL WEBSITE</p>
               </div>
             </div>
             <div className="inside_details">
-              <NavLink to="">Hello.timigroupschool.com</NavLink>
+              <NavLink to="" className="detail_link">Hello.timigroupschool.com</NavLink>
               <div className="detail_name">
                 <p>EMAIL</p>
               </div>

@@ -30,9 +30,6 @@ const SignUpModal = ({ setOpenSignUp }) => {
             <NavLink to="/register">
               <button className="school_owner">I’m a School Owner</button>
             </NavLink>
-            <NavLink to="">
-              <button className="school_finder">I’m a School Finder</button>
-            </NavLink>
           </div>
         </div>
         <div className="right_sign_up"></div>

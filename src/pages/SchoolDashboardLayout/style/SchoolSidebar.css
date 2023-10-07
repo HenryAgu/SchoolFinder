@@ -17,10 +17,11 @@
   padding: 10px 12px;
 }
 
-.side_items:hover,.side_items:focus{
+.side_items:hover,.active{
   background-color: #C8E8FF;
   border-radius: 50%;
 }
+
 
 /* Medium Screens */
 @media (max-width: 991px) {

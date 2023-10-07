@@ -7,49 +7,74 @@ import SchoolImage from "../images/SchoolImage.png";
 import LocationIcon from "../images/Location.svg";
 import Rate from "../images/Rate.svg";
 
+// Toastify
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 const RegisteredSchools = () => {
   const schoolsCard = [
     {
       SchoolImages: SchoolImage,
       SchoolName: "Glowfield School",
       SchoolLocation: "Calle Sin National Headquater",
+      SchoolEmail: "email@gmail.com",
     },
     {
       SchoolImages: SchoolImage,
       SchoolName: "Glowfield School",
       SchoolLocation: "Calle Sin National Headquater",
+      SchoolEmail: "email@gmail.com",
     },
     {
       SchoolImages: SchoolImage,
       SchoolName: "Glowfield School",
       SchoolLocation: "Calle Sin National Headquater",
+      SchoolEmail: "email@gmail.com",
     },
     {
       SchoolImages: SchoolImage,
       SchoolName: "Glowfield School",
       SchoolLocation: "Calle Sin National Headquater",
+      SchoolEmail: "email@gmail.com",
     },
     {
       SchoolImages: SchoolImage,
       SchoolName: "Glowfield School",
       SchoolLocation: "Calle Sin National Headquater",
+      SchoolEmail: "email@gmail.com",
     },
     {
       SchoolImages: SchoolImage,
       SchoolName: "Glowfield School",
       SchoolLocation: "Calle Sin National Headquater",
+      SchoolEmail: "email@gmail.com",
     },
     {
       SchoolImages: SchoolImage,
       SchoolName: "Glowfield School",
       SchoolLocation: "Calle Sin National Headquater",
+      SchoolEmail: "email@gmail.com",
     },
     {
       SchoolImages: SchoolImage,
       SchoolName: "Glowfield School",
       SchoolLocation: "Calle Sin National Headquater",
+      SchoolEmail: "email@gmail.com",
     },
   ];
+
+  // delete school
+  const handleDeleteSchool = () =>
+    toast.error("School Deleted!", {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
   return (
     <div>
       <div className="profile_dash_header">
@@ -73,13 +98,18 @@ const RegisteredSchools = () => {
               </div>
               <img src={Rate} alt="icon" className="rate" />
               <div className="registered_school_buttons">
-                <button className="message">Message</button>
-                <button className="delete">Delete</button>
+                <a href={`mailto:${school.SchoolEmail}`}>
+                  <button className="message">Send Email</button>
+                </a>
+                <button className="delete" onClick={handleDeleteSchool}>
+                  Delete
+                </button>
               </div>
             </div>
           </div>
         ))}
       </div>
+      <ToastContainer />
     </div>
   );
 };

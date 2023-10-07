@@ -21,6 +21,7 @@ import AdminDashboardLayout from "./pages/AdminDashboardLayout/AdminDashboardLay
 import RegisteredSchools from "./pages/AdminDashboardLayout/pages/RegisteredSchools";
 import DocumentVerification from "./pages/AdminDashboardLayout/pages/DocumentVerification";
 import AdminProfile from "./pages/AdminDashboardLayout/pages/AdminProfile";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   const [openSignIn, setOpenSignIn] = useState(false);
@@ -32,6 +33,7 @@ function App() {
         value={{ openSignIn, setOpenSignIn, openSignUp, setOpenSignUp }}
       >
         <BrowserRouter>
+        <ScrollToTop/>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/register" element={<Register />} />

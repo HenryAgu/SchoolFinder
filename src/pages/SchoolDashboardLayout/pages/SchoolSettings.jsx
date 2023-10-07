@@ -1,9 +1,14 @@
+import React, { useState } from "react";
+
 import "./style/SchoolSetting.css";
 
 // images
 import RenameIcon from "./images/rename.svg";
+import { Switch } from "antd";
 
 const SchoolSettings = () => {
+  const [schoolName, setSchoolName] = useState("Timi Group School");
+  const [schoolMotto, setSchoolMotto] = useState("We rise by lifting others");
   return (
     <div className="school_settings">
       <div className="profile_dash_header">
@@ -14,6 +19,28 @@ const SchoolSettings = () => {
         <p>Guide school finders on what to see</p>
       </div>
       <div className="settings_form">
+        <div className="school_visibility">
+          <h4>School Visibility</h4>
+          <Switch/>
+        </div>
+      <div className="inner_settings">
+          <label htmlFor="">School Profile Image</label>
+          <div className="form_box">
+            <input
+              type="file"
+            />
+            <img src={RenameIcon} alt="rename" />
+          </div>
+        </div>
+        <div className="inner_settings">
+          <label htmlFor="">School Display Image</label>
+          <div className="form_box">
+            <input
+              type="file"
+            />
+            <img src={RenameIcon} alt="rename" />
+          </div>
+        </div>
         <div className="inner_settings">
           <label htmlFor="">School Type</label>
           <select name="type">
@@ -24,16 +51,27 @@ const SchoolSettings = () => {
         <div className="inner_settings">
           <label htmlFor="">School Name</label>
           <div className="form_box">
-            <input type="text" placeholder="Timi Group School" />
+            <input
+              type="text"
+              value={schoolName}
+              onChange={(e) => setSchoolName(e.target.value)}
+            />
             <img src={RenameIcon} alt="rename" />
           </div>
         </div>
         <div className="inner_settings">
           <label htmlFor="">School Motto</label>
           <div className="form_box">
-            <input type="text" placeholder="We rise by lifting others" />
+            <input
+              type="text"
+              value={schoolMotto}
+              onChange={(e) => setSchoolMotto(e.target.value)}
+            />
             <img src={RenameIcon} alt="rename" />
           </div>
+        </div>
+        <div className="update_button">
+          <button>Update</button>
         </div>
       </div>
     </div>

@@ -6,7 +6,39 @@ import Avatar from "../images/Avatar.svg";
 import LogoutIcon from "../images/Logout.svg";
 import { NavLink } from "react-router-dom";
 
+// Toastify
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 const AdminProfile = () => {
+  // delete admin
+  const deleteAdmin = () => {
+    toast.error("Admin Deleted!", {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+  }
+
+  // delete admin
+  const addAdmin = (e) => {
+    e.preventDefault();
+    toast.success('Admin Created Successfully!', {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      });
+  }
   const admins = [
     {
       image: Avatar,
@@ -41,7 +73,7 @@ const AdminProfile = () => {
                   <span>{admin.AdminEmail}</span>
                 </div>
               </div>
-              <button>Delete</button>
+              <button onClick={deleteAdmin}>Delete</button>
             </div>
           ))}
           <div className="log_out">
@@ -63,10 +95,11 @@ const AdminProfile = () => {
                 <label htmlFor="Access Password">Access Password</label>
                 <input type="email" placeholder="HenryAgu1234" />
             </div>
-            <button>Add Admin</button>
+            <button onClick={addAdmin}>Add Admin</button>
           </form>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };
