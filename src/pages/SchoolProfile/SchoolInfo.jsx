@@ -41,13 +41,13 @@ const SchoolInfo = () => {
         <div className="school-inside_details">
           <div className="left_inside_details">
             <div className="inside_details">
-              <NavLink to="" className="detail_link">www.timigroupschool.com</NavLink>
+              <a href="www.timigroupschool.com" className="detail_link">www.timigroupschool.com</a>
               <div className="detail_name">
                 <p>SCHOOL WEBSITE</p>
               </div>
             </div>
             <div className="inside_details">
-              <NavLink to="" className="detail_link">Hello.timigroupschool.com</NavLink>
+              <a href="mailto:Hello@timigroupschool.com" className="detail_link">Hello@timigroupschool.com</a>
               <div className="detail_name">
                 <p>EMAIL</p>
               </div>

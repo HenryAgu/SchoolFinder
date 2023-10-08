@@ -53,8 +53,8 @@ const Hero = () => {
           <img src={GoogleMapIcon} alt="map" />
           <input type="text" placeholder="Find School By Name" />
         </div>
-        <NavLink>
-          <button onClick={() => setOpenSignUp(true)}>Find School</button>
+        <NavLink to="/search_page">
+          <button>Find School</button>
         </NavLink>
       </div>
       {openSignUp && <SignUpModal setOpenSignUp={setOpenSignUp} />}

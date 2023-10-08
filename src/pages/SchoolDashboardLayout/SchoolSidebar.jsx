@@ -29,7 +29,7 @@ const SchoolSidebar = () => {
       <div className="menu_box">
         {menuItems.map((item, index) => (
           <NavLink to={item.path}>
-            <div className="side_items" activeClassName="active" key={index}>
+            <div className="side_items" activeClassName="activeLink" key={index}>
               <img src={item.icon} alt={item.name} title={item.name} />
             </div>
           </NavLink>

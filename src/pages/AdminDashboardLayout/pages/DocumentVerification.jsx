@@ -6,7 +6,24 @@ import SchoolAvatar from "../images/SchoolAvatar.png";
 import DM from "../images/DM.png";
 import DM2 from "../images/DM2.png";
 
+
+// Toastify
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 const DocumentVerification = () => {
+  const handleDocApproving = () =>{
+    toast.success("Approved!", {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+  }
   return (
     <div>
       <div className="profile_dash_header">
@@ -39,7 +56,7 @@ const DocumentVerification = () => {
                   <p>Calle Sin National Headquater</p>
                 </div>
               </div>
-              <button>Approve</button>
+              <button onClick={handleDocApproving}>Approve</button>
             </div>
           </div>
           <div className="inner_message">
@@ -50,6 +67,7 @@ const DocumentVerification = () => {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };
